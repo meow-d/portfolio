@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import bicolor_cat from "/src/assets/3d_models/bicolor_cat/scene.gltf";
+    import bicolor_cat from "/src/assets/3d_models/bicolor_cat.glb";
 
     import * as THREE from "three";
     import WebGL from "three/addons/capabilities/WebGL.js";
