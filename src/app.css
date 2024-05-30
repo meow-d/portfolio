@@ -1,0 +1,72 @@
+/* var */
+* {
+    --item-border: 1px solid rgba(255, 255, 255, 0.25);
+    --item-color: rgba(255, 255, 255, 0.038);
+    --item-hover-color: rgba(255, 255, 255, 0.155);
+    --item-active-color: rgba(255, 255, 255, 0.385);
+}
+
+
+/* main stuff */
+body {
+    margin: 0;
+    background-color: black;
+}
+
+main {
+    max-width: 1300px;
+    height: 100%;
+    background: transparent;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    /* transform: rotateY(2deg); */
+
+    color: white;
+}
+
+/* style */
+a {
+    color: turquoise;
+}
+
+a:hover {
+    color: rgb(72, 255, 237);
+
+    &:active {
+        color: rgb(50, 179, 166);
+    }
+}
+
+h1,
+h3,
+h2 {
+    font-family: "Nanum Myeongjo", sans-serif;
+}
+
+h4,
+p,
+li {
+    font-family: "Arvo", sans-serif;
+}
+
+/* content */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+section {
+    height: 80vh;
+}
+
+/* stuff */
+.scroll-down {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin-bottom: 6rem;
+}
