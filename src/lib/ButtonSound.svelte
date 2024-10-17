@@ -1,10 +1,10 @@
 <script>
     import { onMount } from "svelte";
     import clickAudioPath from "/src/assets/sfx/734218__okularperpendikular__plasticmouseclick.ogg";
-    import c from "/src/assets/sfx/470436__erokia__menu-ui-click-206.wav";
+    import hoverAudioPath from "/src/assets/sfx/470436__erokia__menu-ui-click-206.wav";
 
     function addListeners(button) {
-        const hoverAudio = new Audio(c);
+        const hoverAudio = new Audio(hoverAudioPath);
         const clickAudio = new Audio(clickAudioPath);
 
         button.addEventListener(
