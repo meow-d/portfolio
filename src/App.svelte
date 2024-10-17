@@ -38,6 +38,14 @@
         <h2>education</h2>
         <ul>
             <li>
+                Degree in Computer Science, specialism in Artificial
+                Intelligence (currently studying)
+                <ul>
+                    <li>2024 - 2026</li>
+                    <li>@ Asia Pacafic University</li>
+                </ul>
+            </li>
+            <li>
                 Diploma in ICT, specialism in Software Engineering
                 <ul>
                     <li>2022 - 2024</li>
