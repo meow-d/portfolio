@@ -1,7 +1,7 @@
 <script>
     import Carousel from "./lib/Carousel.svelte";
     import Background from "./lib/Background.svelte";
-    import GridList from "./lib/GridList.svelte";
+    import SkillsListGrid from "./lib/SkillsListGrid.svelte";
     import Sound from "./lib/ButtonSound.svelte";
     import APlayerSvelte from "./lib/APlayer-svelte.svelte";
     import AutoplayCheck from "./lib/AutoplayCheck.svelte";
@@ -29,7 +29,7 @@
         <p style="display: inline;">
             from strongest to weakest. click to view.
         </p>
-        <GridList />
+        <SkillsListGrid />
     </section>
 
     <Carousel />

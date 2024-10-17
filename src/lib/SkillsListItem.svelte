@@ -13,8 +13,16 @@
         <div class="spacer"></div>
         <span class="grid-list-title">{title}</span>
         <div class="spacer"></div>
+
+        <!-- TODO is there a more elgant way to do this? without js, that is -->
+        {#if text}
+            <i class="indicator fa-solid fa-asterisk fa-fade fa-spin"></i>
+        {/if}
     </div>
-    <div bind:this={textElement} class="text hidden">{text}</div>
+
+    {#if text}
+        <div bind:this={textElement} class="text hidden">{text}</div>
+    {/if}
 </button>
 
 <style>
@@ -34,6 +42,7 @@
 
         padding: 1rem;
         border-radius: 10px;
+        height: fit-content;
 
         &:hover {
             background: var(--item-hover-color);
@@ -43,6 +52,10 @@
         &:active {
             background: var(--item-active-color);
             transform: scale3d(0.95, 0.95, 0.95) rotateY(-10deg);
+
+            transition:
+                background 0.05s,
+                transform 0.05s ease;
         }
 
         &:focus-visible {
@@ -71,6 +84,11 @@
 
         /* not needed since we're using flexbox */
         float: left;
+    }
+
+    /* indicator */
+    .indicator {
+        font-size: 1rem;
     }
 
     /* text */
