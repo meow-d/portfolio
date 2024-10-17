@@ -100,10 +100,10 @@
                     </p>
                     <p>
                         There is an older version hosted on Vercel. It doesn't
-                        have the recommendations, image uploads, etc. But it's
-                        there if you wanna see my design.
+                        have features like recommendations, image uploads, etc.
+                        But it's there if you wanna see my design.
                     </p>
-                    <p>
+                    <div class="links">
                         <a
                             href="https://github.com/farm-info/software-development-project"
                             >git repo</a
@@ -111,31 +111,31 @@
                         <a href="https://foodmanjones.vercel.app/"
                             >link (older version)</a
                         >
-                    </p>
+                    </div>
                 </div>
+                <!-- TODO make this 1:1 -->
                 <img src={foodmanjones} alt="" />
             </div>
             <div class="card">
                 <div>
                     <h3>Farm.info</h3>
                     <p>
-                        Another school assignment. If you think it looks awful,
-                        wait till you see what it looked like before. I'm not
-                        really proud of this.
+                        Another school assignment. It looks awful and I'm really
+                        really not proud of this.
                     </p>
                     <p>
                         The version hosted on Glitch stopped working for some
                         reason.
                     </p>
-                    <p>
+                    <div class="links">
                         <a
                             href="https://github.com/farm-info/software-development-project"
                             >git repo</a
                         >
-                        <a href="https://foodmanjones.vercel.app/"
-                            >link (older version)</a
+                        <a href="https://farm-info.glitch.me"
+                            >link (stopped working)</a
                         >
-                    </p>
+                    </div>
                 </div>
                 <!-- <img src={foodmanjones} alt="" /> -->
             </div>
@@ -162,6 +162,7 @@
         flex-grow: 1;
     }
 
+    /* TODO some duplicate code, should have shared a button component, but whatever */
     .carosel-button-container button {
         height: fit-content;
         font-size: 1.5rem;
@@ -186,6 +187,10 @@
         &:active {
             background: var(--item-active-color);
             transform: scale3d(0.9, 0.9, 0.9) rotateY(-10deg);
+
+            transition:
+                background 0.05s,
+                transform 0.05s ease;
         }
     }
 
@@ -209,22 +214,43 @@
         width: 80%;
         height: 80%;
         position: absolute;
+        /* TODO temp solution */
+        overflow-x: hidden;
         transition:
             transform 1s,
             opacity 1s;
 
-        display: flex;
-        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    @media (max-width: 600px) {
+        .card {
+            grid-template-columns: 1fr;
+        }
     }
 
     .card * {
         margin: 0;
         padding: 1rem;
         box-sizing: border-box;
+        width: 100%;
+    }
+
+    .card .links {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .card .links a {
+        padding: 0.5rem;
     }
 
     .card img {
         border-radius: 40px;
-        height: 100%;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
     }
 </style>
