@@ -1,9 +1,11 @@
 <script>
     export let title, text, icon;
     let textElement;
+    let indicator;
 
     function toggleGridListText() {
         textElement.classList.toggle("hidden");
+        indicator.classList.toggle("fa-spin");
     }
 </script>
 
@@ -16,7 +18,10 @@
 
         <!-- TODO is there a more elgant way to do this? without js, that is -->
         {#if text}
-            <i class="indicator fa-solid fa-asterisk fa-fade fa-spin"></i>
+            <i
+                bind:this={indicator}
+                class="indicator fa-solid fa-asterisk fa-fade"
+            ></i>
         {/if}
     </div>
 

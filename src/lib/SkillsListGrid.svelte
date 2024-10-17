@@ -21,7 +21,7 @@
         },
 
         {
-            title: "frontend web development",
+            title: "frontend web dev",
             icon: "fa-brands fa-css3-alt",
             text: "mainly good at css. have minor experience with frameworks like react, svelte, and next.js",
         },
