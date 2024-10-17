@@ -6,4 +6,5 @@ export default defineConfig({
   plugins: [svelte()],
   assetsInclude: ['**/*.gltf', "**/*.glb"],
   base: "/portfolio/",
+  host: '127.0.0.1'
 })
