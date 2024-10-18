@@ -1,4 +1,6 @@
 <script>
+    import Button from "./Button.svelte";
+
     export let title, text, icon;
     let textElement;
     let indicator;
@@ -22,6 +24,7 @@
     />
 </svelte:head>
 
+<Button on:click={toggleGridListText}>
     <div class="title-and-icon">
         <i class={icon}></i>
         <div class="spacer"></div>
@@ -36,7 +39,7 @@
     {#if text}
         <div bind:this={textElement} class="text hidden">{text}</div>
     {/if}
-</button>
+</Button>
 
 <style>
     /* text style */

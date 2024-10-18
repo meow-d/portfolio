@@ -1,6 +1,8 @@
 <script>
     import { onMount } from "svelte";
+    import Button from "./Button.svelte";
     import foodmanjones from "../assets/FoodManJones.png";
+
     let carousel;
     let cells;
     let cellCount;
@@ -37,13 +39,13 @@
                 "deg)";
         }
 
-        let prevButton = document.querySelector(".previous-button");
+        let prevButton = document.querySelector("#previous-button");
         prevButton.addEventListener("click", function () {
             selectedIndex--;
             rotateCarousel();
         });
 
-        let nextButton = document.querySelector(".next-button");
+        let nextButton = document.querySelector("#next-button");
         nextButton.addEventListener("click", function () {
             selectedIndex++;
             rotateCarousel();
@@ -80,14 +82,17 @@
 <section>
     <div class="carosel-button-container">
         <h2 style="display: inline-block; margin-right: 1rem;">stuff i did</h2>
-        <button class="previous-button"
-            ><i class="fa-solid fa-caret-left"></i></button
-        >
-        <button class="next-button"
-            ><i class="fa-solid fa-caret-right"></i></button
-        >
+        <div class="carousel-buttons">
+            <Button id="previous-button">
+                <i class="fa-solid fa-caret-left"></i>
+            </Button>
+            <Button id="next-button">
+                <i class="fa-solid fa-caret-right"></i>
+            </Button>
+        </div>
         <div class="spacer"></div>
     </div>
+
     <div class="carousel">
         <div class="carousel-inner">
             <div class="card">
@@ -162,36 +167,13 @@
         flex-grow: 1;
     }
 
-    /* TODO some duplicate code, should have shared a button component, but whatever */
-    .carosel-button-container button {
+    /* TODO remove reduntant code */
+    .carousel-buttons > * {
         height: fit-content;
         font-size: 1.5rem;
+        padding: 0;
 
-        perspective: 1000px;
-        transform-style: preserve-3d;
-
-        background: var(--item-color);
-        border: var(--item-border);
-        color: white;
         border-radius: 20%;
-
-        transition:
-            background 0.1s,
-            transform 0.1s ease;
-
-        &:hover {
-            background: var(--item-hover-color);
-            transform: scale3d(1.1, 1.1, 1.1) rotateY(10deg);
-        }
-
-        &:active {
-            background: var(--item-active-color);
-            transform: scale3d(0.9, 0.9, 0.9) rotateY(-10deg);
-
-            transition:
-                background 0.05s,
-                transform 0.05s ease;
-        }
     }
 
     .carousel-inner {
