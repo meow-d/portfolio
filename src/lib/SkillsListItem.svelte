@@ -9,7 +9,19 @@
     }
 </script>
 
-<button on:click={toggleGridListText}>
+<svelte:head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin="anonymous"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cousine&display=swap"
+        rel="stylesheet"
+    />
+</svelte:head>
+
     <div class="title-and-icon">
         <i class={icon}></i>
         <div class="spacer"></div>
@@ -27,41 +39,10 @@
 </button>
 
 <style>
-    button {
-        color: inherit;
-        font: inherit;
-        cursor: pointer;
-        outline: inherit;
-
-        background: var(--item-color);
-        border: var(--item-border);
-        perspective: 1000px;
-        transform-style: preserve-3d;
-        transition:
-            background 0.1s,
-            transform 0.1s ease;
-
-        padding: 1rem;
-        border-radius: 10px;
-        height: fit-content;
-
-        &:hover {
-            background: var(--item-hover-color);
-            transform: scale3d(1.05, 1.05, 1.05) rotateY(10deg);
-        }
-
-        &:active {
-            background: var(--item-active-color);
-            transform: scale3d(0.95, 0.95, 0.95) rotateY(-10deg);
-
-            transition:
-                background 0.05s,
-                transform 0.05s ease;
-        }
-
-        &:focus-visible {
-            outline: 2px solid blue;
-        }
+    /* text style */
+    .title-and-icon,
+    .text {
+        font-family: "Cousine", monospace;
     }
 
     /* title and icon */
