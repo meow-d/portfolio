@@ -16,12 +16,8 @@
         <span class="grid-list-title">{title}</span>
         <div class="spacer"></div>
 
-        <!-- TODO is there a more elgant way to do this? without js, that is -->
         {#if text}
-            <i
-                bind:this={indicator}
-                class="indicator fa-solid fa-asterisk fa-fade"
-            ></i>
+            <i bind:this={indicator} class="indicator fa-solid fa-asterisk"></i>
         {/if}
     </div>
 
