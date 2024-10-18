@@ -215,7 +215,7 @@
         height: 80%;
         position: absolute;
         /* TODO temp solution */
-        overflow-x: hidden;
+        overflow-x: scroll;
         transition:
             transform 1s,
             opacity 1s;
