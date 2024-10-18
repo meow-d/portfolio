@@ -72,7 +72,7 @@
 
     <footer>
         <h2>credits</h2>
-        <p>made with three.js, APlayer, vite, and svelte (barely utilized)</p>
+        <p>made with svelte, vite, three.js, APlayer</p>
         <p>
             "Bicolor Cat"
             <a
