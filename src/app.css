@@ -56,7 +56,7 @@ h1 {
 }
 
 section {
-    height: 80vh;
+    min-height: 80vh;
 }
 
 ul {
